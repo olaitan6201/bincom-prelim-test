@@ -25,6 +25,7 @@ class PollingUnitResults extends Component
             $pu_results = $pu_results->where('lga.lga_name', 'LIKE', '%'.$this->search.'%')
             ->OrWhere('ward.ward_name', 'LIKE', '%'.$this->search.'%')
             ->OrWhere('polling_unit.polling_unit_name', 'LIKE', '%'.$this->search.'%')
+            ->OrWhere('announced_pu_results.party_abbreviation', 'LIKE', '%'.$this->search.'%')
             ->OrWhere('polling_unit.polling_unit_number', 'LIKE', '%'.$this->search.'%');
         }
 
