@@ -14,7 +14,7 @@ class PollingUnitResults extends Component
 
     public function mount()
     {
-        $this->search = 'aaa';
+        $this->search = '';
     }
     
     public function render()
