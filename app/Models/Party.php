@@ -13,14 +13,4 @@ class Party extends Model
     protected $table = "party";
 
     public $timestamps = false;
-
-    protected $appends = ['pu_name'];
-
-
-    public function getPuNameAttribute()
-    {
-        $id = $this->original['polling_unit_uniqueid'];
-
-        return PollingUnit::where('uniqueid', $id)->first()->polling_unit_name;
-    }
 }

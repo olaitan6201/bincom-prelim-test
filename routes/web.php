@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\LGAResults;
+use App\Http\Livewire\NewPollingUnitResult;
 use App\Http\Livewire\PollingUnitResults;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', PollingUnitResults::class);
+Route::get('/', NewPollingUnitResult::class);
 Route::get('/pu_results', PollingUnitResults::class);
 Route::get('/lga_results', LGAResults::class);
